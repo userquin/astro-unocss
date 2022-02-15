@@ -1,0 +1,31 @@
+---
+// Component Imports
+// import Tour from '../components/Tour.astro';
+// You can import components from any supported Framework here!
+/* ASTRO:COMPONENT_IMPORTS */
+
+import 'uno.css' 
+import Counter from '../components/Counter.jsx'
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+let title = 'My Astro Site';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+<html lang="en">
+    <head>
+        <style global>
+            @import "../styles/global.css";
+        </style>
+    </head>
+
+    <body flex class="bg-teal-400 flex justify-center">
+        <div class="text-black text-2xl"> Test Unocss Text</div>
+        <Counter client:load />
+    </body>
+
+</html>
